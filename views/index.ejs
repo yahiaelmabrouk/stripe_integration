@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f7f7f9;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 480px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+        padding: 32px 28px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 32px;
+      }
+      .item {
+        border-bottom: 1px solid #eee;
+        padding: 18px 0;
+      }
+      .item:last-child {
+        border-bottom: none;
+      }
+      .item h3 {
+        margin: 0 0 8px 0;
+        color: #222;
+      }
+      .item p {
+        margin: 4px 0;
+        color: #555;
+      }
+      form {
+        text-align: center;
+        margin-top: 32px;
+      }
+      input[type="submit"] {
+        background: #635bff;
+        color: #fff;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 6px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      input[type="submit"]:hover {
+        background: #4b44c7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Shopping Cart</h1>
+      <div class="item">
+        <h3>Node.js and Express book</h3>
+        <p>Price: $50.00</p>
+        <p>Quantity: 1</p>
+      </div>
+      <div class="item">
+        <h3>JavaScript T-Shirt</h3>
+        <p>Price: $20.00</p>
+        <p>Quantity: 2</p>
+      </div>
+      <form action="/checkout" method="post">
+        <input type="submit" value="Proceed to Checkout" />
+      </form>
+    </div>
+  </body>
+</html>
